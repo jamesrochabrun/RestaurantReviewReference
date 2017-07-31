@@ -1,0 +1,15 @@
+PODS:
+  - Locksmith (3.0.0)
+  - p2.OAuth2 (3.0.3)
+
+DEPENDENCIES:
+  - Locksmith
+  - p2.OAuth2
+
+SPEC CHECKSUMS:
+  Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
+  p2.OAuth2: 63d8d3e366ac2c43bfe8bfa13b42cfeb908c314e
+
+PODFILE CHECKSUM: 100d2a1c9f999b953da074053277e33e9d4305be
+
+COCOAPODS: 1.1.1

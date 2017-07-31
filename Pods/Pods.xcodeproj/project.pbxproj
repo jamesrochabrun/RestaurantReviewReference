@@ -1,0 +1,871 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006E33F2D4BBF271402C802F0EED9A32 /* Dictionary_Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B302E2FF21265B17428F331739A8A /* Dictionary_Initializers.swift */; };
+		04460BEBC4AA15A8ED913ADFF369086C /* OAuth2Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C67089FFFD759619805CAF99449D62 /* OAuth2Logger.swift */; };
+		07F2A8C963908BAA16678C5F863C3698 /* OAuth2CustomAuthorizer+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE087CCD6549C83F4D8E4BC81B43797 /* OAuth2CustomAuthorizer+iOS.swift */; };
+		09510457DC2AFAF0CD9BD8A328FA9D8E /* OAuth2RequestPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302B13124E16757B5A30712366C40AF0 /* OAuth2RequestPerformer.swift */; };
+		0D4D1928DCA348768842563333437112 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9340053B76BB15F7E7A22DA835874110 /* SafariServices.framework */; };
+		16328342EC40D6BB0AD99BF053F2BFFC /* Pods-RestaurantReviews-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E9EA10C97A82064898595EC4AC72CA /* Pods-RestaurantReviews-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A1CE4C08DD07FB8172885C3B3946199 /* OAuth2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0D35095EE035624B2D7775F9AC9751 /* OAuth2.swift */; };
+		1ECF5BF3F58E827A86671BB5F43A3F6C /* OAuth2Securable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BB1ED340104E710EBB7B9D249BAF2C /* OAuth2Securable.swift */; };
+		1F0855EF3FCF0EFE13C50CA329A2156B /* LocksmithAccessibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D0AA173D20CEA1D9F3DD6697B57D38 /* LocksmithAccessibleOption.swift */; };
+		20E9B6355F6B4E520B07404CEF2865B1 /* OAuth2ImplicitGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437674F1C1B3DC96E5D940CA2BDEE569 /* OAuth2ImplicitGrant.swift */; };
+		220942F3BA5AA539E8CC888F289C2123 /* OAuth2Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB7F34273F49B77F47F4748F4DEB7D0 /* OAuth2Response.swift */; };
+		2355056918C6803C037B2229A4C3ECF8 /* OAuth2CodeGrantFacebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C242C31CEC7960628F905218B6638E /* OAuth2CodeGrantFacebook.swift */; };
+		26D34729E612FAFA1475CAD66E3D1747 /* OAuth2KeychainAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F070B14B9B5F049F9182F08362D5136C /* OAuth2KeychainAccount.swift */; };
+		27D889D317A485E463FE504E54F451FF /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65250DD69A036663E22717C1874F752 /* Locksmith.swift */; };
+		3C3DDDCE33C4140FB403BFEF5C7E4D07 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6304856FEC5DF812BE1887237301FE21 /* Security.framework */; };
+		401843BECD354D037793A51BE9CA31D4 /* OAuth2ClientCredentialsReddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FE607FB143853705AACBF492F97F95 /* OAuth2ClientCredentialsReddit.swift */; };
+		45C70001311261A434EFCBAD2FDDBADC /* OAuth2Authorizer+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F9E4BE370BCCF11604C4C1CD21ADCC /* OAuth2Authorizer+iOS.swift */; };
+		49B0FC48074234E25C103ED8DCE42FE8 /* OAuth2CodeGrantLinkedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D8CDE88DD1060F96DE0AEF4DA115E1 /* OAuth2CodeGrantLinkedIn.swift */; };
+		4A8A5BBF9FAE61D5E6D3FB31C68BD393 /* OAuth2CustomAuthorizerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69E13FBB63A7749E41F6EFF7229CEEA /* OAuth2CustomAuthorizerUI.swift */; };
+		4DEA2A8CB60FF265DAC91CCA24D98B19 /* OAuth2Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A85FA8FC5D3DD7E1A6E0D369168A30 /* OAuth2Error.swift */; };
+		4EA15AB63765FCCB322D456B2FA7E86A /* OAuth2WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E83F9544A76415E58265842357CFB1 /* OAuth2WebViewController.swift */; };
+		4FF92FED760D6E8319677A6296D89239 /* OAuth2AuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFC984DD0619E88F6E5DC7A3DBDF912 /* OAuth2AuthConfig.swift */; };
+		535D7C94DA870C225B8729B302C4FE24 /* OAuth2CodeGrantAzure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68ABD91415FD387D8290E4F860A071 /* OAuth2CodeGrantAzure.swift */; };
+		779E0C91A26BCE5D42B81136FFA21EE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BB0C837B9D7F9746D21694A259F6CF /* Foundation.framework */; };
+		78B2338EFDF22FFA6575BA90469BEB29 /* Locksmith-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A29B522EE1BDD93C60FBCCE03CBDCD1 /* Locksmith-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		796F9F73AFBF07E9B6EC763352578547 /* OAuth2DataLoaderSessionTaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFE8571F953A0A215882E1E94E0E4AF /* OAuth2DataLoaderSessionTaskDelegate.swift */; };
+		7F1CFEEC47875FCA7F8897BF9D16D143 /* OAuth2CodeGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FFAB9F5EA2F7BAF6BC9C23E9EFC8DE /* OAuth2CodeGrant.swift */; };
+		7FBDA22BC8E282470B033630D9E5210F /* LocksmithSecurityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006E17D8AFCFFE51794A2FBED937A8C /* LocksmithSecurityClass.swift */; };
+		87738DF9A4DEDCBF52325FD54E1D8DA2 /* OAuth2ClientCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC19233D8253F3B90779459A42D56C04 /* OAuth2ClientCredentials.swift */; };
+		8D3BB10C30B780347AAB0ECB7895FF2F /* LocksmithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530DA3CDB9011AFA7B963D37FD748C0 /* LocksmithError.swift */; };
+		8FA9B26AA518B65A03682A1781E2B4D1 /* Locksmith.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DA6A79E96E6C0AE0BCCD6BA91CFD97D /* Locksmith.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91AD45B427E4480C4D958A58666D789E /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79513D098B57D13118FA3A08DCED9553 /* LocksmithInternetAuthenticationType.swift */; };
+		9C001AFF697F797F5096922545E552D0 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703A255390B37EF2A901F007601EB1BB /* extensions.swift */; };
+		A1BF3C7767029ACB09446551E4872649 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BB0C837B9D7F9746D21694A259F6CF /* Foundation.framework */; };
+		B4C3402F29859D4BF4F26A08ECB3B588 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B545C91CBACE730BBF4D1DA98DEAA0 /* Keychain.swift */; };
+		B875F14E78DB15D8C4D65BB69E55BA04 /* Locksmith-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C82C8F836687AFDFA342AB1A587356 /* Locksmith-dummy.m */; };
+		BA0A8FEA9ADBCC338DF2CEEE2A91FFF8 /* Pods-RestaurantReviews-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F801777485C3E859EA08B53EC9FE877 /* Pods-RestaurantReviews-dummy.m */; };
+		BF04DD3C793DE52E4D5FFB9374310349 /* OAuth2CodeGrantBasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1437F8E34972DD3DFDD570BE1CA0635 /* OAuth2CodeGrantBasicAuth.swift */; };
+		CAA418DF1176F5AA55E12FBAB8860CED /* LocksmithInternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2944BCEA7449B334E3B00DEDCE3EC1 /* LocksmithInternetProtocol.swift */; };
+		D676EAB1DC3D4334360FECB7A9EF967B /* OAuth2DynReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1AFBAB798EB446317E38BF78C5351 /* OAuth2DynReg.swift */; };
+		DAADCA0717B2FE3CD732B3BF7CB76CDE /* OAuth2AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA890E20644A93FDB62803D7F6FC196 /* OAuth2AuthRequest.swift */; };
+		DB735B23877FBD274E56CC18A0A593B7 /* OAuth2Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DED74D3A5450E3453E3B8EAE36EC279 /* OAuth2Base.swift */; };
+		E4D95B893326D4A6BDB6EED45ED8884E /* p2.OAuth2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 188ACF0BCE0509F259547DB2CA3A8466 /* p2.OAuth2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4DBD6FD7B2FB7B51A03ECEEA4C4DE0B /* OAuth2Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F62D8AE1316BF1738A2C494F86BD4B8 /* OAuth2Requestable.swift */; };
+		EA266D05C93DDC91544F9B45AA5E7018 /* OAuth2DebugURLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83144D508BDDAB47D02ED5621CC6833 /* OAuth2DebugURLSessionDelegate.swift */; };
+		F04498D16E3067EE84FADF219EE9A681 /* OAuth2PasswordGrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5718909485F9AB07124BDA38FB7EE2D /* OAuth2PasswordGrant.swift */; };
+		F4107F7E282091A3C4ABB1A3B1CB8EF8 /* OAuth2DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D79C2813E673C69B1C60D080B5F83E84 /* OAuth2DataLoader.swift */; };
+		F59B56CC3B962B893B27121E7EB8FE3B /* OAuth2DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947B434B2DE44F71C9F24683F827E3B3 /* OAuth2DataRequest.swift */; };
+		F7B91560827800D83FA65920542682A8 /* p2.OAuth2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB1001993BD45411B327545E47DEF881 /* p2.OAuth2-dummy.m */; };
+		F83AAE89B23ACAC927AAC1B63392D12C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3BB0C837B9D7F9746D21694A259F6CF /* Foundation.framework */; };
+		FB374781A63DABB41F1E475A755CCC1B /* OAuth2ClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D84729ACFBAADD3FA1CA5F44E48C48E /* OAuth2ClientConfig.swift */; };
+		FBE40DBA2239200DFFB61BA15568F4BA /* OAuth2CodeGrantNoTokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5520EAB3D58C462AA347BE6B9C7738A /* OAuth2CodeGrantNoTokenType.swift */; };
+		FD79919D27FE73C0D57909A589BA0223 /* OAuth2AuthorizerUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EB7BCC1D2E786C1B1431EA877F37AE /* OAuth2AuthorizerUI.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EF5CBFCFDD737DA1A5015CE9A7E9BC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7F727D48928BF47D913AFC48BB6A978;
+			remoteInfo = Locksmith;
+		};
+		FA4010A58BE245AE2BA303662E2861EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29EEEC9E0608911AEE79862A99EEA2B5;
+			remoteInfo = p2.OAuth2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1889A19AB63DFE1FA3B236323E23CB42 /* Locksmith.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Locksmith.modulemap; sourceTree = "<group>"; };
+		188ACF0BCE0509F259547DB2CA3A8466 /* p2.OAuth2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "p2.OAuth2-umbrella.h"; sourceTree = "<group>"; };
+		1CBD0C8BCE2977EBA42FC0A18FDA9794 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D4DC92D4254C0566D54F943C532E1E6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D84729ACFBAADD3FA1CA5F44E48C48E /* OAuth2ClientConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2ClientConfig.swift; path = Sources/Base/OAuth2ClientConfig.swift; sourceTree = "<group>"; };
+		2048F7432554F3633666DAB877F1A262 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		272DF61B5246A2AA776EB30DDD624D13 /* Pods-RestaurantReviews.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RestaurantReviews.modulemap"; sourceTree = "<group>"; };
+		27E83F9544A76415E58265842357CFB1 /* OAuth2WebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2WebViewController.swift; path = Sources/iOS/OAuth2WebViewController.swift; sourceTree = "<group>"; };
+		29A85FA8FC5D3DD7E1A6E0D369168A30 /* OAuth2Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Error.swift; path = Sources/Base/OAuth2Error.swift; sourceTree = "<group>"; };
+		2AFC984DD0619E88F6E5DC7A3DBDF912 /* OAuth2AuthConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AuthConfig.swift; path = Sources/Base/OAuth2AuthConfig.swift; sourceTree = "<group>"; };
+		2B6B302E2FF21265B17428F331739A8A /* Dictionary_Initializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary_Initializers.swift; path = Source/Dictionary_Initializers.swift; sourceTree = "<group>"; };
+		2DA6A79E96E6C0AE0BCCD6BA91CFD97D /* Locksmith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Locksmith.h; path = Source/Locksmith.h; sourceTree = "<group>"; };
+		302B13124E16757B5A30712366C40AF0 /* OAuth2RequestPerformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2RequestPerformer.swift; path = Sources/Base/OAuth2RequestPerformer.swift; sourceTree = "<group>"; };
+		36812C571F42BC069B1119F3D53B4DD0 /* Locksmith.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Locksmith.xcconfig; sourceTree = "<group>"; };
+		37FFAB9F5EA2F7BAF6BC9C23E9EFC8DE /* OAuth2CodeGrant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CodeGrant.swift; path = Sources/Flows/OAuth2CodeGrant.swift; sourceTree = "<group>"; };
+		437674F1C1B3DC96E5D940CA2BDEE569 /* OAuth2ImplicitGrant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2ImplicitGrant.swift; path = Sources/Flows/OAuth2ImplicitGrant.swift; sourceTree = "<group>"; };
+		4530DA3CDB9011AFA7B963D37FD748C0 /* LocksmithError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithError.swift; path = Source/LocksmithError.swift; sourceTree = "<group>"; };
+		47A3DFB3A04AF58E965FA6E977E9DF59 /* p2.OAuth2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = p2.OAuth2.modulemap; sourceTree = "<group>"; };
+		4B2944BCEA7449B334E3B00DEDCE3EC1 /* LocksmithInternetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetProtocol.swift; path = Source/LocksmithInternetProtocol.swift; sourceTree = "<group>"; };
+		4DC1AFBAB798EB446317E38BF78C5351 /* OAuth2DynReg.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2DynReg.swift; path = Sources/Flows/OAuth2DynReg.swift; sourceTree = "<group>"; };
+		4FE1B346559840C9D7B5E84D42337C88 /* p2.OAuth2.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = p2.OAuth2.xcconfig; sourceTree = "<group>"; };
+		53D0AEF87B922F1765980194DB44981A /* Pods-RestaurantReviews-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RestaurantReviews-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5879BBFC9AB0E84468A3D05703BF9B76 /* p2.OAuth2-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "p2.OAuth2-prefix.pch"; sourceTree = "<group>"; };
+		5EFE8571F953A0A215882E1E94E0E4AF /* OAuth2DataLoaderSessionTaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2DataLoaderSessionTaskDelegate.swift; path = Sources/DataLoader/OAuth2DataLoaderSessionTaskDelegate.swift; sourceTree = "<group>"; };
+		61BB1ED340104E710EBB7B9D249BAF2C /* OAuth2Securable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Securable.swift; path = Sources/Base/OAuth2Securable.swift; sourceTree = "<group>"; };
+		6304856FEC5DF812BE1887237301FE21 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		68FE607FB143853705AACBF492F97F95 /* OAuth2ClientCredentialsReddit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2ClientCredentialsReddit.swift; path = Sources/Flows/OAuth2ClientCredentialsReddit.swift; sourceTree = "<group>"; };
+		69C242C31CEC7960628F905218B6638E /* OAuth2CodeGrantFacebook.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CodeGrantFacebook.swift; path = Sources/Flows/OAuth2CodeGrantFacebook.swift; sourceTree = "<group>"; };
+		6F62D8AE1316BF1738A2C494F86BD4B8 /* OAuth2Requestable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Requestable.swift; path = Sources/Base/OAuth2Requestable.swift; sourceTree = "<group>"; };
+		703A255390B37EF2A901F007601EB1BB /* extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = extensions.swift; path = Sources/Base/extensions.swift; sourceTree = "<group>"; };
+		71E764A96185A8184133DDE094E7EECE /* Pods-RestaurantReviews-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RestaurantReviews-frameworks.sh"; sourceTree = "<group>"; };
+		79513D098B57D13118FA3A08DCED9553 /* LocksmithInternetAuthenticationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetAuthenticationType.swift; path = Source/LocksmithInternetAuthenticationType.swift; sourceTree = "<group>"; };
+		7DED74D3A5450E3453E3B8EAE36EC279 /* OAuth2Base.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Base.swift; path = Sources/Base/OAuth2Base.swift; sourceTree = "<group>"; };
+		7F115774318CEA629FC2FCD25C21363B /* Pods-RestaurantReviews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RestaurantReviews.debug.xcconfig"; sourceTree = "<group>"; };
+		82BDB398933A0DE31A451DC0AF7FCCEA /* Locksmith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Locksmith.framework; path = Locksmith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A0D35095EE035624B2D7775F9AC9751 /* OAuth2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2.swift; path = Sources/Flows/OAuth2.swift; sourceTree = "<group>"; };
+		8A29B522EE1BDD93C60FBCCE03CBDCD1 /* Locksmith-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-umbrella.h"; sourceTree = "<group>"; };
+		8AA890E20644A93FDB62803D7F6FC196 /* OAuth2AuthRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AuthRequest.swift; path = Sources/Base/OAuth2AuthRequest.swift; sourceTree = "<group>"; };
+		8EE087CCD6549C83F4D8E4BC81B43797 /* OAuth2CustomAuthorizer+iOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OAuth2CustomAuthorizer+iOS.swift"; path = "Sources/iOS/OAuth2CustomAuthorizer+iOS.swift"; sourceTree = "<group>"; };
+		9340053B76BB15F7E7A22DA835874110 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/SafariServices.framework; sourceTree = DEVELOPER_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		947B434B2DE44F71C9F24683F827E3B3 /* OAuth2DataRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2DataRequest.swift; path = Sources/DataLoader/OAuth2DataRequest.swift; sourceTree = "<group>"; };
+		9F801777485C3E859EA08B53EC9FE877 /* Pods-RestaurantReviews-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RestaurantReviews-dummy.m"; sourceTree = "<group>"; };
+		A69E13FBB63A7749E41F6EFF7229CEEA /* OAuth2CustomAuthorizerUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CustomAuthorizerUI.swift; path = Sources/Base/OAuth2CustomAuthorizerUI.swift; sourceTree = "<group>"; };
+		A7BB9444535D37397CE9B9116748B416 /* Pods-RestaurantReviews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RestaurantReviews.release.xcconfig"; sourceTree = "<group>"; };
+		AB1001993BD45411B327545E47DEF881 /* p2.OAuth2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "p2.OAuth2-dummy.m"; sourceTree = "<group>"; };
+		ADB7F34273F49B77F47F4748F4DEB7D0 /* OAuth2Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Response.swift; path = Sources/Base/OAuth2Response.swift; sourceTree = "<group>"; };
+		B006E17D8AFCFFE51794A2FBED937A8C /* LocksmithSecurityClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithSecurityClass.swift; path = Source/LocksmithSecurityClass.swift; sourceTree = "<group>"; };
+		B0C79ECEF889185B72F23F4F74C095C6 /* Pods-RestaurantReviews-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RestaurantReviews-acknowledgements.plist"; sourceTree = "<group>"; };
+		B65250DD69A036663E22717C1874F752 /* Locksmith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locksmith.swift; path = Source/Locksmith.swift; sourceTree = "<group>"; };
+		B7C82C8F836687AFDFA342AB1A587356 /* Locksmith-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Locksmith-dummy.m"; sourceTree = "<group>"; };
+		B7D0AA173D20CEA1D9F3DD6697B57D38 /* LocksmithAccessibleOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithAccessibleOption.swift; path = Source/LocksmithAccessibleOption.swift; sourceTree = "<group>"; };
+		BF5612DD025DA6B173099FDE4CB0C8D5 /* Locksmith-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-prefix.pch"; sourceTree = "<group>"; };
+		C0B10EA8B164148795565C8C1F9EFE74 /* Pods_RestaurantReviews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RestaurantReviews.framework; path = "Pods-RestaurantReviews.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3BB0C837B9D7F9746D21694A259F6CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D0E9EA10C97A82064898595EC4AC72CA /* Pods-RestaurantReviews-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RestaurantReviews-umbrella.h"; sourceTree = "<group>"; };
+		D1437F8E34972DD3DFDD570BE1CA0635 /* OAuth2CodeGrantBasicAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CodeGrantBasicAuth.swift; path = Sources/Flows/OAuth2CodeGrantBasicAuth.swift; sourceTree = "<group>"; };
+		D6B545C91CBACE730BBF4D1DA98DEAA0 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = SwiftKeychain/Keychain/Keychain.swift; sourceTree = "<group>"; };
+		D77E788CA4F89E45D80654D19EE4B2BD /* p2_OAuth2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = p2_OAuth2.framework; path = p2.OAuth2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D79C2813E673C69B1C60D080B5F83E84 /* OAuth2DataLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2DataLoader.swift; path = Sources/DataLoader/OAuth2DataLoader.swift; sourceTree = "<group>"; };
+		E1C67089FFFD759619805CAF99449D62 /* OAuth2Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2Logger.swift; path = Sources/Base/OAuth2Logger.swift; sourceTree = "<group>"; };
+		E5718909485F9AB07124BDA38FB7EE2D /* OAuth2PasswordGrant.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2PasswordGrant.swift; path = Sources/Flows/OAuth2PasswordGrant.swift; sourceTree = "<group>"; };
+		E83144D508BDDAB47D02ED5621CC6833 /* OAuth2DebugURLSessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2DebugURLSessionDelegate.swift; path = Sources/Base/OAuth2DebugURLSessionDelegate.swift; sourceTree = "<group>"; };
+		E8EB7BCC1D2E786C1B1431EA877F37AE /* OAuth2AuthorizerUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2AuthorizerUI.swift; path = Sources/Base/OAuth2AuthorizerUI.swift; sourceTree = "<group>"; };
+		EF092742B8C1A6D58F40A77FAD3459DD /* Pods-RestaurantReviews-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RestaurantReviews-resources.sh"; sourceTree = "<group>"; };
+		F070B14B9B5F049F9182F08362D5136C /* OAuth2KeychainAccount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2KeychainAccount.swift; path = Sources/Base/OAuth2KeychainAccount.swift; sourceTree = "<group>"; };
+		F3D8CDE88DD1060F96DE0AEF4DA115E1 /* OAuth2CodeGrantLinkedIn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CodeGrantLinkedIn.swift; path = Sources/Flows/OAuth2CodeGrantLinkedIn.swift; sourceTree = "<group>"; };
+		F5520EAB3D58C462AA347BE6B9C7738A /* OAuth2CodeGrantNoTokenType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CodeGrantNoTokenType.swift; path = Sources/Flows/OAuth2CodeGrantNoTokenType.swift; sourceTree = "<group>"; };
+		F5F9E4BE370BCCF11604C4C1CD21ADCC /* OAuth2Authorizer+iOS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OAuth2Authorizer+iOS.swift"; path = "Sources/iOS/OAuth2Authorizer+iOS.swift"; sourceTree = "<group>"; };
+		FC19233D8253F3B90779459A42D56C04 /* OAuth2ClientCredentials.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2ClientCredentials.swift; path = Sources/Flows/OAuth2ClientCredentials.swift; sourceTree = "<group>"; };
+		FC68ABD91415FD387D8290E4F860A071 /* OAuth2CodeGrantAzure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OAuth2CodeGrantAzure.swift; path = Sources/Flows/OAuth2CodeGrantAzure.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		184C10D3BE648B8139CEDF10122BC241 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F83AAE89B23ACAC927AAC1B63392D12C /* Foundation.framework in Frameworks */,
+				0D4D1928DCA348768842563333437112 /* SafariServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A44A14035DBA111F1A334CCDFB91FF4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				779E0C91A26BCE5D42B81136FFA21EE7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE23ABFDEA2F6A85A5CA8B3557C0B77A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1BF3C7767029ACB09446551E4872649 /* Foundation.framework in Frameworks */,
+				3C3DDDCE33C4140FB403BFEF5C7E4D07 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		108D361AFAAF38420665FAF4210878F2 /* p2.OAuth2 */ = {
+			isa = PBXGroup;
+			children = (
+				703A255390B37EF2A901F007601EB1BB /* extensions.swift */,
+				D6B545C91CBACE730BBF4D1DA98DEAA0 /* Keychain.swift */,
+				8A0D35095EE035624B2D7775F9AC9751 /* OAuth2.swift */,
+				2AFC984DD0619E88F6E5DC7A3DBDF912 /* OAuth2AuthConfig.swift */,
+				F5F9E4BE370BCCF11604C4C1CD21ADCC /* OAuth2Authorizer+iOS.swift */,
+				E8EB7BCC1D2E786C1B1431EA877F37AE /* OAuth2AuthorizerUI.swift */,
+				8AA890E20644A93FDB62803D7F6FC196 /* OAuth2AuthRequest.swift */,
+				7DED74D3A5450E3453E3B8EAE36EC279 /* OAuth2Base.swift */,
+				1D84729ACFBAADD3FA1CA5F44E48C48E /* OAuth2ClientConfig.swift */,
+				FC19233D8253F3B90779459A42D56C04 /* OAuth2ClientCredentials.swift */,
+				68FE607FB143853705AACBF492F97F95 /* OAuth2ClientCredentialsReddit.swift */,
+				37FFAB9F5EA2F7BAF6BC9C23E9EFC8DE /* OAuth2CodeGrant.swift */,
+				FC68ABD91415FD387D8290E4F860A071 /* OAuth2CodeGrantAzure.swift */,
+				D1437F8E34972DD3DFDD570BE1CA0635 /* OAuth2CodeGrantBasicAuth.swift */,
+				69C242C31CEC7960628F905218B6638E /* OAuth2CodeGrantFacebook.swift */,
+				F3D8CDE88DD1060F96DE0AEF4DA115E1 /* OAuth2CodeGrantLinkedIn.swift */,
+				F5520EAB3D58C462AA347BE6B9C7738A /* OAuth2CodeGrantNoTokenType.swift */,
+				8EE087CCD6549C83F4D8E4BC81B43797 /* OAuth2CustomAuthorizer+iOS.swift */,
+				A69E13FBB63A7749E41F6EFF7229CEEA /* OAuth2CustomAuthorizerUI.swift */,
+				D79C2813E673C69B1C60D080B5F83E84 /* OAuth2DataLoader.swift */,
+				5EFE8571F953A0A215882E1E94E0E4AF /* OAuth2DataLoaderSessionTaskDelegate.swift */,
+				947B434B2DE44F71C9F24683F827E3B3 /* OAuth2DataRequest.swift */,
+				E83144D508BDDAB47D02ED5621CC6833 /* OAuth2DebugURLSessionDelegate.swift */,
+				4DC1AFBAB798EB446317E38BF78C5351 /* OAuth2DynReg.swift */,
+				29A85FA8FC5D3DD7E1A6E0D369168A30 /* OAuth2Error.swift */,
+				437674F1C1B3DC96E5D940CA2BDEE569 /* OAuth2ImplicitGrant.swift */,
+				F070B14B9B5F049F9182F08362D5136C /* OAuth2KeychainAccount.swift */,
+				E1C67089FFFD759619805CAF99449D62 /* OAuth2Logger.swift */,
+				E5718909485F9AB07124BDA38FB7EE2D /* OAuth2PasswordGrant.swift */,
+				6F62D8AE1316BF1738A2C494F86BD4B8 /* OAuth2Requestable.swift */,
+				302B13124E16757B5A30712366C40AF0 /* OAuth2RequestPerformer.swift */,
+				ADB7F34273F49B77F47F4748F4DEB7D0 /* OAuth2Response.swift */,
+				61BB1ED340104E710EBB7B9D249BAF2C /* OAuth2Securable.swift */,
+				27E83F9544A76415E58265842357CFB1 /* OAuth2WebViewController.swift */,
+				C8E1B37737CE4994D5C2BB8D2D3003B3 /* Support Files */,
+			);
+			name = p2.OAuth2;
+			path = p2.OAuth2;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6550D3B3216EF0253926D047DCF2359B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A21253D1EBBBAC8956F55CEB45B02A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82BDB398933A0DE31A451DC0AF7FCCEA /* Locksmith.framework */,
+				D77E788CA4F89E45D80654D19EE4B2BD /* p2_OAuth2.framework */,
+				C0B10EA8B164148795565C8C1F9EFE74 /* Pods_RestaurantReviews.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A399CD318188D866391263B0480823B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				427C8073A171CD592EDFC64CC58D9C8A /* Pods-RestaurantReviews */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2C3DC41ABCE636BDF22A60041DE8ACE3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D4DC92D4254C0566D54F943C532E1E6 /* Info.plist */,
+				1889A19AB63DFE1FA3B236323E23CB42 /* Locksmith.modulemap */,
+				36812C571F42BC069B1119F3D53B4DD0 /* Locksmith.xcconfig */,
+				B7C82C8F836687AFDFA342AB1A587356 /* Locksmith-dummy.m */,
+				BF5612DD025DA6B173099FDE4CB0C8D5 /* Locksmith-prefix.pch */,
+				8A29B522EE1BDD93C60FBCCE03CBDCD1 /* Locksmith-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Locksmith";
+			sourceTree = "<group>";
+		};
+		427C8073A171CD592EDFC64CC58D9C8A /* Pods-RestaurantReviews */ = {
+			isa = PBXGroup;
+			children = (
+				2048F7432554F3633666DAB877F1A262 /* Info.plist */,
+				272DF61B5246A2AA776EB30DDD624D13 /* Pods-RestaurantReviews.modulemap */,
+				53D0AEF87B922F1765980194DB44981A /* Pods-RestaurantReviews-acknowledgements.markdown */,
+				B0C79ECEF889185B72F23F4F74C095C6 /* Pods-RestaurantReviews-acknowledgements.plist */,
+				9F801777485C3E859EA08B53EC9FE877 /* Pods-RestaurantReviews-dummy.m */,
+				71E764A96185A8184133DDE094E7EECE /* Pods-RestaurantReviews-frameworks.sh */,
+				EF092742B8C1A6D58F40A77FAD3459DD /* Pods-RestaurantReviews-resources.sh */,
+				D0E9EA10C97A82064898595EC4AC72CA /* Pods-RestaurantReviews-umbrella.h */,
+				7F115774318CEA629FC2FCD25C21363B /* Pods-RestaurantReviews.debug.xcconfig */,
+				A7BB9444535D37397CE9B9116748B416 /* Pods-RestaurantReviews.release.xcconfig */,
+			);
+			name = "Pods-RestaurantReviews";
+			path = "Target Support Files/Pods-RestaurantReviews";
+			sourceTree = "<group>";
+		};
+		476A65E16A19AAE741B7FD02DF469098 /* Locksmith */ = {
+			isa = PBXGroup;
+			children = (
+				2B6B302E2FF21265B17428F331739A8A /* Dictionary_Initializers.swift */,
+				2DA6A79E96E6C0AE0BCCD6BA91CFD97D /* Locksmith.h */,
+				B65250DD69A036663E22717C1874F752 /* Locksmith.swift */,
+				B7D0AA173D20CEA1D9F3DD6697B57D38 /* LocksmithAccessibleOption.swift */,
+				4530DA3CDB9011AFA7B963D37FD748C0 /* LocksmithError.swift */,
+				79513D098B57D13118FA3A08DCED9553 /* LocksmithInternetAuthenticationType.swift */,
+				4B2944BCEA7449B334E3B00DEDCE3EC1 /* LocksmithInternetProtocol.swift */,
+				B006E17D8AFCFFE51794A2FBED937A8C /* LocksmithSecurityClass.swift */,
+				2C3DC41ABCE636BDF22A60041DE8ACE3 /* Support Files */,
+			);
+			name = Locksmith;
+			path = Locksmith;
+			sourceTree = "<group>";
+		};
+		6550D3B3216EF0253926D047DCF2359B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C3BB0C837B9D7F9746D21694A259F6CF /* Foundation.framework */,
+				9340053B76BB15F7E7A22DA835874110 /* SafariServices.framework */,
+				6304856FEC5DF812BE1887237301FE21 /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				8DC75540041C16F180210937212820AE /* Pods */,
+				1A21253D1EBBBAC8956F55CEB45B02A4 /* Products */,
+				2A399CD318188D866391263B0480823B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8DC75540041C16F180210937212820AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				476A65E16A19AAE741B7FD02DF469098 /* Locksmith */,
+				108D361AFAAF38420665FAF4210878F2 /* p2.OAuth2 */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8E1B37737CE4994D5C2BB8D2D3003B3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CBD0C8BCE2977EBA42FC0A18FDA9794 /* Info.plist */,
+				47A3DFB3A04AF58E965FA6E977E9DF59 /* p2.OAuth2.modulemap */,
+				4FE1B346559840C9D7B5E84D42337C88 /* p2.OAuth2.xcconfig */,
+				AB1001993BD45411B327545E47DEF881 /* p2.OAuth2-dummy.m */,
+				5879BBFC9AB0E84468A3D05703BF9B76 /* p2.OAuth2-prefix.pch */,
+				188ACF0BCE0509F259547DB2CA3A8466 /* p2.OAuth2-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/p2.OAuth2";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CC123C86723EA5719D710C8CC47D5FCB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4D95B893326D4A6BDB6EED45ED8884E /* p2.OAuth2-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7CE5A9279112FAB14126410B4090631 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B2338EFDF22FFA6575BA90469BEB29 /* Locksmith-umbrella.h in Headers */,
+				8FA9B26AA518B65A03682A1781E2B4D1 /* Locksmith.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F99D99430E2CDC857738A09D964B1941 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16328342EC40D6BB0AD99BF053F2BFFC /* Pods-RestaurantReviews-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		29EEEC9E0608911AEE79862A99EEA2B5 /* p2.OAuth2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 336E0E3526D83089E6292031FA06725D /* Build configuration list for PBXNativeTarget "p2.OAuth2" */;
+			buildPhases = (
+				E62871D86723A9FF987944D931D27048 /* Sources */,
+				184C10D3BE648B8139CEDF10122BC241 /* Frameworks */,
+				CC123C86723EA5719D710C8CC47D5FCB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = p2.OAuth2;
+			productName = p2.OAuth2;
+			productReference = D77E788CA4F89E45D80654D19EE4B2BD /* p2_OAuth2.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7638055B146FAA1E1E76DD32D43B8581 /* Pods-RestaurantReviews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BFA4420F14682B3780E0E0B7E33CF9B /* Build configuration list for PBXNativeTarget "Pods-RestaurantReviews" */;
+			buildPhases = (
+				7AE8C73C4316A24C7D3C8B56A5B75DB7 /* Sources */,
+				A44A14035DBA111F1A334CCDFB91FF4A /* Frameworks */,
+				F99D99430E2CDC857738A09D964B1941 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				827DDC21799DCA8FA86BCC2390B1FA25 /* PBXTargetDependency */,
+				1BB69CB3CEA37893CBAB87721A9D7C3A /* PBXTargetDependency */,
+			);
+			name = "Pods-RestaurantReviews";
+			productName = "Pods-RestaurantReviews";
+			productReference = C0B10EA8B164148795565C8C1F9EFE74 /* Pods_RestaurantReviews.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C7F727D48928BF47D913AFC48BB6A978 /* Locksmith */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 294A9EF2E0B6D19A24BE6E3D9E5072E1 /* Build configuration list for PBXNativeTarget "Locksmith" */;
+			buildPhases = (
+				890E4BABED82AB6D5F577BA651D79FD6 /* Sources */,
+				DE23ABFDEA2F6A85A5CA8B3557C0B77A /* Frameworks */,
+				D7CE5A9279112FAB14126410B4090631 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Locksmith;
+			productName = Locksmith;
+			productReference = 82BDB398933A0DE31A451DC0AF7FCCEA /* Locksmith.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1A21253D1EBBBAC8956F55CEB45B02A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7F727D48928BF47D913AFC48BB6A978 /* Locksmith */,
+				29EEEC9E0608911AEE79862A99EEA2B5 /* p2.OAuth2 */,
+				7638055B146FAA1E1E76DD32D43B8581 /* Pods-RestaurantReviews */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7AE8C73C4316A24C7D3C8B56A5B75DB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA0A8FEA9ADBCC338DF2CEEE2A91FFF8 /* Pods-RestaurantReviews-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		890E4BABED82AB6D5F577BA651D79FD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				006E33F2D4BBF271402C802F0EED9A32 /* Dictionary_Initializers.swift in Sources */,
+				B875F14E78DB15D8C4D65BB69E55BA04 /* Locksmith-dummy.m in Sources */,
+				27D889D317A485E463FE504E54F451FF /* Locksmith.swift in Sources */,
+				1F0855EF3FCF0EFE13C50CA329A2156B /* LocksmithAccessibleOption.swift in Sources */,
+				8D3BB10C30B780347AAB0ECB7895FF2F /* LocksmithError.swift in Sources */,
+				91AD45B427E4480C4D958A58666D789E /* LocksmithInternetAuthenticationType.swift in Sources */,
+				CAA418DF1176F5AA55E12FBAB8860CED /* LocksmithInternetProtocol.swift in Sources */,
+				7FBDA22BC8E282470B033630D9E5210F /* LocksmithSecurityClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E62871D86723A9FF987944D931D27048 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C001AFF697F797F5096922545E552D0 /* extensions.swift in Sources */,
+				B4C3402F29859D4BF4F26A08ECB3B588 /* Keychain.swift in Sources */,
+				1A1CE4C08DD07FB8172885C3B3946199 /* OAuth2.swift in Sources */,
+				4FF92FED760D6E8319677A6296D89239 /* OAuth2AuthConfig.swift in Sources */,
+				45C70001311261A434EFCBAD2FDDBADC /* OAuth2Authorizer+iOS.swift in Sources */,
+				FD79919D27FE73C0D57909A589BA0223 /* OAuth2AuthorizerUI.swift in Sources */,
+				DAADCA0717B2FE3CD732B3BF7CB76CDE /* OAuth2AuthRequest.swift in Sources */,
+				DB735B23877FBD274E56CC18A0A593B7 /* OAuth2Base.swift in Sources */,
+				FB374781A63DABB41F1E475A755CCC1B /* OAuth2ClientConfig.swift in Sources */,
+				87738DF9A4DEDCBF52325FD54E1D8DA2 /* OAuth2ClientCredentials.swift in Sources */,
+				401843BECD354D037793A51BE9CA31D4 /* OAuth2ClientCredentialsReddit.swift in Sources */,
+				7F1CFEEC47875FCA7F8897BF9D16D143 /* OAuth2CodeGrant.swift in Sources */,
+				535D7C94DA870C225B8729B302C4FE24 /* OAuth2CodeGrantAzure.swift in Sources */,
+				BF04DD3C793DE52E4D5FFB9374310349 /* OAuth2CodeGrantBasicAuth.swift in Sources */,
+				2355056918C6803C037B2229A4C3ECF8 /* OAuth2CodeGrantFacebook.swift in Sources */,
+				49B0FC48074234E25C103ED8DCE42FE8 /* OAuth2CodeGrantLinkedIn.swift in Sources */,
+				FBE40DBA2239200DFFB61BA15568F4BA /* OAuth2CodeGrantNoTokenType.swift in Sources */,
+				07F2A8C963908BAA16678C5F863C3698 /* OAuth2CustomAuthorizer+iOS.swift in Sources */,
+				4A8A5BBF9FAE61D5E6D3FB31C68BD393 /* OAuth2CustomAuthorizerUI.swift in Sources */,
+				F4107F7E282091A3C4ABB1A3B1CB8EF8 /* OAuth2DataLoader.swift in Sources */,
+				796F9F73AFBF07E9B6EC763352578547 /* OAuth2DataLoaderSessionTaskDelegate.swift in Sources */,
+				F59B56CC3B962B893B27121E7EB8FE3B /* OAuth2DataRequest.swift in Sources */,
+				EA266D05C93DDC91544F9B45AA5E7018 /* OAuth2DebugURLSessionDelegate.swift in Sources */,
+				D676EAB1DC3D4334360FECB7A9EF967B /* OAuth2DynReg.swift in Sources */,
+				4DEA2A8CB60FF265DAC91CCA24D98B19 /* OAuth2Error.swift in Sources */,
+				20E9B6355F6B4E520B07404CEF2865B1 /* OAuth2ImplicitGrant.swift in Sources */,
+				26D34729E612FAFA1475CAD66E3D1747 /* OAuth2KeychainAccount.swift in Sources */,
+				04460BEBC4AA15A8ED913ADFF369086C /* OAuth2Logger.swift in Sources */,
+				F04498D16E3067EE84FADF219EE9A681 /* OAuth2PasswordGrant.swift in Sources */,
+				E4DBD6FD7B2FB7B51A03ECEEA4C4DE0B /* OAuth2Requestable.swift in Sources */,
+				09510457DC2AFAF0CD9BD8A328FA9D8E /* OAuth2RequestPerformer.swift in Sources */,
+				220942F3BA5AA539E8CC888F289C2123 /* OAuth2Response.swift in Sources */,
+				1ECF5BF3F58E827A86671BB5F43A3F6C /* OAuth2Securable.swift in Sources */,
+				4EA15AB63765FCCB322D456B2FA7E86A /* OAuth2WebViewController.swift in Sources */,
+				F7B91560827800D83FA65920542682A8 /* p2.OAuth2-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1BB69CB3CEA37893CBAB87721A9D7C3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = p2.OAuth2;
+			target = 29EEEC9E0608911AEE79862A99EEA2B5 /* p2.OAuth2 */;
+			targetProxy = FA4010A58BE245AE2BA303662E2861EB /* PBXContainerItemProxy */;
+		};
+		827DDC21799DCA8FA86BCC2390B1FA25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Locksmith;
+			target = C7F727D48928BF47D913AFC48BB6A978 /* Locksmith */;
+			targetProxy = 2EF5CBFCFDD737DA1A5015CE9A7E9BC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0088865238BAD714AA63CCC088625F4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F115774318CEA629FC2FCD25C21363B /* Pods-RestaurantReviews.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RestaurantReviews/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RestaurantReviews/Pods-RestaurantReviews.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_RestaurantReviews;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		01B8CC6FBA93780082CF528703358C3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7BB9444535D37397CE9B9116748B416 /* Pods-RestaurantReviews.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-RestaurantReviews/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RestaurantReviews/Pods-RestaurantReviews.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_RestaurantReviews;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		06CE7E0F9116C8FDED7CBFEE4302ACEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FE1B346559840C9D7B5E84D42337C88 /* p2.OAuth2.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/p2.OAuth2/p2.OAuth2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/p2.OAuth2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/p2.OAuth2/p2.OAuth2.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = p2_OAuth2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2CF703B28A674D7C73A12AF60DBE45EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FE1B346559840C9D7B5E84D42337C88 /* p2.OAuth2.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/p2.OAuth2/p2.OAuth2-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/p2.OAuth2/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/p2.OAuth2/p2.OAuth2.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = p2_OAuth2;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7AB952C8C9AA41413FBB9DB6B5A27B4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36812C571F42BC069B1119F3D53B4DD0 /* Locksmith.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Locksmith/Locksmith-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Locksmith/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Locksmith/Locksmith.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Locksmith;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		EAD51297C9B43B2BB5BF0C6E8E573464 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36812C571F42BC069B1119F3D53B4DD0 /* Locksmith.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Locksmith/Locksmith-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Locksmith/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Locksmith/Locksmith.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Locksmith;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		294A9EF2E0B6D19A24BE6E3D9E5072E1 /* Build configuration list for PBXNativeTarget "Locksmith" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAD51297C9B43B2BB5BF0C6E8E573464 /* Debug */,
+				7AB952C8C9AA41413FBB9DB6B5A27B4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BFA4420F14682B3780E0E0B7E33CF9B /* Build configuration list for PBXNativeTarget "Pods-RestaurantReviews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0088865238BAD714AA63CCC088625F4C /* Debug */,
+				01B8CC6FBA93780082CF528703358C3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
+				673254EEAF0B5BF4596080C749645884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		336E0E3526D83089E6292031FA06725D /* Build configuration list for PBXNativeTarget "p2.OAuth2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CE7E0F9116C8FDED7CBFEE4302ACEA /* Debug */,
+				2CF703B28A674D7C73A12AF60DBE45EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

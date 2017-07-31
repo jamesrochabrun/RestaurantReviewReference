@@ -7,8 +7,18 @@
 //
 
 import UIKit
+import p2_OAuth2
 
 class PermissionsController: UIViewController {
+    
+    //MARK: Oauth Object
+    let oauth = OAuth2ClientCredentials(settings: [
+        "client_id" : "nYvOMlD62pRFFqpK6i8qIw",
+        "client_secret" : "BZeBMuCvmOTrf8rqIowO3LgyDoJ8N6jkIOUJSAocyxC9uGKcOQeF6pl2EBoJZDWa",
+        "authorize_uri" : "https://api.yelp.com/oauth2/token",
+        "secret_in_body" : true,
+        "keychain" : false
+        ])
     
     var isAuthorizedForLocation: Bool
     var isAuthenticatedWithToken: Bool
@@ -109,11 +119,43 @@ class PermissionsController: UIViewController {
     func requestLocationPermissions() {
     }
     
-    func requestOAuthToken() {
-    }
-    
     func dismissPermissions() {
         dismiss(animated: true, completion: nil)
     }
-
 }
+
+//MARK: Oauth logic
+extension PermissionsController {
+    
+    //MARK: REQUESTING TOKEN AND SAVING IT IN KEYCHAIN
+    func requestOAuthToken() {
+        
+        oauth.authorize { (authJSON, error) in
+            
+            dump(authJSON)
+            if let params = authJSON {
+                guard let token = params["access_Token"] as? String,
+                    let expiration = params["expires_in"] as? TimeInterval else { return }
+                let account = YelpAccount(accessToken: token, expiration: expiration, grantDate: Date())
+                do {
+                   try account.save()
+                    self.oauthTokenButton.setTitle("Token granted", for: .disabled)
+                    self.oauthTokenButton.isEnabled = false
+                } catch let error {
+                    print("error  is \(error.localizedDescription)")
+                }
+            } else {
+                print("auth went wrong \(String(describing: error))")
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
