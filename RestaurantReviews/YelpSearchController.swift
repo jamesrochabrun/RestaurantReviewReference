@@ -11,6 +11,10 @@ import UIKit
 class YelpSearchController: UIViewController {
     
     // MARK: - Properties
+    lazy var locationManager: LocationManager = {
+        return LocationManager(delegate: self, permissionDelegate: nil)
+    }()
+    var coordinate: Coordinate?
     
     let searchController = UISearchController(searchResultsController: nil)
     @IBOutlet weak var tableView: UITableView!
@@ -18,7 +22,9 @@ class YelpSearchController: UIViewController {
     let dataSource = YelpSearchResultsDataSource()
     
     var isAuthorized: Bool {
-        return false
+        let isAuthorizedWithYelpToken = YelpAccount.isAuthorized
+        let isAuthorizedForLocation = LocationManager.isAuthorized
+        return isAuthorizedWithYelpToken && isAuthorizedForLocation
     }
 
     override func viewDidLoad() {
@@ -29,7 +35,9 @@ class YelpSearchController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if !isAuthorized {
+        if isAuthorized {
+            locationManager.requestLocation()
+        } else {
             checkPermissions()
         }
     }
@@ -56,10 +64,11 @@ class YelpSearchController: UIViewController {
     /// Checks (1) if the user is authenticated against the Yelp API and has an OAuth
     /// token and (2) if the user has authorized location access for whenInUse tracking.
     func checkPermissions() {
-        let isAuthorizedForLocation = false
-        let isAuthenticatedWithToken = false
         
-        let permissionsController = PermissionsController(isAuthorizedForLocation: isAuthorizedForLocation, isAuthenticatedWithToken: isAuthenticatedWithToken)
+        let isAuthorizedForLocation = LocationManager.isAuthorized
+        let isAuthorizedWithToken = YelpAccount.isAuthorized
+        
+        let permissionsController = PermissionsController(isAuthorizedForLocation: isAuthorizedForLocation, isAuthorizedWithToken: isAuthorizedWithToken)
         present(permissionsController, animated: true, completion: nil)
     }
 }
@@ -86,4 +95,25 @@ extension YelpSearchController {
         }
     }
 }
+
+//MARK: Location manager delegate
+extension YelpSearchController: LocationManagerDelegate {
+    
+    func obtainedCoordinates(_ coordinate: Coordinate) {
+        self.coordinate = coordinate
+    }
+    
+    func failedWithError(_ error: LocationError) {
+        
+    }
+}
+
+
+
+
+
+
+
+
+
 

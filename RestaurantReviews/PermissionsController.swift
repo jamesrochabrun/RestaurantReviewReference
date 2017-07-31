@@ -8,6 +8,7 @@
 
 import UIKit
 import p2_OAuth2
+import CoreLocation
 
 class PermissionsController: UIViewController {
     
@@ -19,6 +20,10 @@ class PermissionsController: UIViewController {
         "secret_in_body" : true,
         "keychain" : false
         ])
+    //MARK: Location Manager object
+    lazy var locationManager: LocationManager = {
+        return LocationManager(delegate: nil, permissionDelegate: self)
+    }()
     
     var isAuthorizedForLocation: Bool
     var isAuthenticatedWithToken: Bool
@@ -74,9 +79,9 @@ class PermissionsController: UIViewController {
         fatalError("init coder not implemented")
     }
     
-    init(isAuthorizedForLocation authorized: Bool, isAuthenticatedWithToken authenticated: Bool) {
-        self.isAuthorizedForLocation = authorized
-        self.isAuthenticatedWithToken = authenticated
+    init(isAuthorizedForLocation locationAuthorization: Bool, isAuthorizedWithToken authorized: Bool) {
+        self.isAuthorizedForLocation = locationAuthorization
+        self.isAuthenticatedWithToken = authorized
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -117,10 +122,28 @@ class PermissionsController: UIViewController {
     }
     
     func requestLocationPermissions() {
+        
+        do {
+            try locationManager.requestLocationAuthorization()
+        } catch let error {
+            print("location auth error: \(error.localizedDescription)")
+        }
     }
     
     func dismissPermissions() {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension PermissionsController: LocationPermissionsDelegate {
+    
+    func authSucceded() {
+        locationPermissionButton.setTitle("Location permission granted", for: .disabled)
+        locationPermissionButton.isEnabled = false
+    }
+    
+    func authFailedWithStaus(_ status: CLAuthorizationStatus) {
+        
     }
 }
 
@@ -134,11 +157,14 @@ extension PermissionsController {
             
             dump(authJSON)
             if let params = authJSON {
-                guard let token = params["access_Token"] as? String,
-                    let expiration = params["expires_in"] as? TimeInterval else { return }
+                guard let token = params["access_token"] as? String,
+                    let expiration = params["expires_in"] as? TimeInterval
+                    else {
+                        return
+                }
                 let account = YelpAccount(accessToken: token, expiration: expiration, grantDate: Date())
                 do {
-                   try account.save()
+                    try account.save()
                     self.oauthTokenButton.setTitle("Token granted", for: .disabled)
                     self.oauthTokenButton.isEnabled = false
                 } catch let error {
