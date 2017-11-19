@@ -11,7 +11,6 @@ import Locksmith
 
 //MARK: SAVING DATA IN KEYCHAIN
 
-
 struct YelpAccount {
     let accessToken: String
     let expiration: TimeInterval

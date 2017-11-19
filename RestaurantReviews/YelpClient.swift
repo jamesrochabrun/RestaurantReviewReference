@@ -26,12 +26,25 @@ class YelpClient: APIClient {
         
         let endpoint = Yelp.search(term: term, coordinate: coordinate, radius: radius, categories: categories, limit: limit, sortBy: sortType)
         let request = endpoint.requestWithAuthorizationHeader(oauthToken: token)
+        
+        //MARK: EXAMPLE OF PRINTING REQUEST TO DEBUG IT
+        print("REQUEST \(request)")
+        //REQUEst https://api.yelp.com/v3/businesses/search?term=Coffee&latitude=37.7873589&longitude=-122.408227&radius&categories=&limit=50&sort_by=rating
+        print("HEADERS \(request.allHTTPHeaderFields)")
+
 
         fetch(with: request, parse: { json -> [YelpBusiness] in
-            guard let business = json["businesses"] as? [[String: Any]] else { return [] }
-            return business.flatMap { YelpBusiness(json: $0) }
+            guard let businesses = json["businesses"] as? [[String: Any]] else { return [] }
+            return businesses.flatMap { YelpBusiness(json: $0) }
         }, completion: completion)//this is the completion of the fetch fuction and beacuse completion is generic now is of type
         //(Result<[YelpBusiness], APIError>) -> Void)
-        
     }
 }
+
+
+
+
+
+
+
+

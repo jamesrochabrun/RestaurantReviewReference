@@ -41,8 +41,7 @@ extension Endpoint {
     func requestWithAuthorizationHeader(oauthToken: String) -> URLRequest {
         var oauthRequest = request
         oauthRequest.addValue("Bearer \(oauthToken)", forHTTPHeaderField: "Authorization")
-        return request
-        
+        return oauthRequest
     }
 }
 

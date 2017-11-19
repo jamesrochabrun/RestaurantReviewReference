@@ -14,7 +14,21 @@ class YelpSearchController: UIViewController {
     lazy var locationManager: LocationManager = {
         return LocationManager(delegate: self, permissionDelegate: nil)
     }()
-    var coordinate: Coordinate?
+    
+    lazy var client: YelpClient = {
+        let yelpAccount = YelpAccount.loadFromKeychain()
+        //if its nil provide a popup to ask for permisson, dont force unwrapp like this
+        let oauthToken = yelpAccount!.accessToken
+        return YelpClient(oauthToken: oauthToken)
+    }()
+    
+    var coordinate: Coordinate? {
+        didSet {
+            if let coordinate = coordinate {
+                self.showNearbyRestaurants(at: coordinate)
+            }
+        }
+    }
     
     let searchController = UISearchController(searchResultsController: nil)
     @IBOutlet weak var tableView: UITableView!
@@ -29,7 +43,6 @@ class YelpSearchController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupSearchBar()
         setupTableView()
     }
@@ -48,9 +61,23 @@ class YelpSearchController: UIViewController {
         self.tableView.delegate = self
     }
     
+    // MARK: - client method to load nearby restaurants
+    fileprivate func showNearbyRestaurants(withTerm term: String = "", at coordinate: Coordinate) {
+        
+        client.search(withTerm: term, at: coordinate) { [weak self] (result) in
+            guard let strongSelf = self else { return }
+            switch result {
+            case .success(let businesses):
+                strongSelf.dataSource.update(with: businesses)
+                strongSelf.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     
     // MARK: - Search
-    
     func setupSearchBar() {
         self.navigationItem.titleView = searchController.searchBar
         
@@ -76,14 +103,20 @@ class YelpSearchController: UIViewController {
 // MARK: - UITableViewDelegate
 extension YelpSearchController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showBusiness", sender: self)
+    }
 }
 
 // MARK: - Search Results
 extension YelpSearchController: UISearchResultsUpdating {
+    
     func updateSearchResults(for searchController: UISearchController) {
-        guard let searchTerm = searchController.searchBar.text else { return }
+        guard let searchTerm = searchController.searchBar.text, let coordinate = coordinate else { return }
         
-        print("Search text: \(searchTerm)")
+        if !searchTerm.isEmpty {
+            self.showNearbyRestaurants(withTerm: searchTerm, at: coordinate)
+        }
     }
 }
 
