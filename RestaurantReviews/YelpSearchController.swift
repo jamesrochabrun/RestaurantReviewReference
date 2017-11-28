@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class YelpSearchController: UIViewController {
     
@@ -41,10 +42,15 @@ class YelpSearchController: UIViewController {
         return isAuthorizedWithYelpToken && isAuthorizedForLocation
     }
 
+    let queue = OperationQueue()
+    
+    @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchBar()
         setupTableView()
+        //KVO
+       // addObserver(self, forKeyPath: #keyPath(YelpBusinessDetailsOperation.isFinished), options: [.new, .old], context: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -70,12 +76,23 @@ class YelpSearchController: UIViewController {
             case .success(let businesses):
                 strongSelf.dataSource.update(with: businesses)
                 strongSelf.tableView.reloadData()
+                
+                strongSelf.mapView.removeAnnotations(strongSelf.mapView.annotations)
+                let annotations: [MKPointAnnotation] = businesses.map { business   in
+                    let point = MKPointAnnotation()
+                    point.coordinate = CLLocationCoordinate2D(latitude: business.location.latitude, longitude: business.location.longitude)
+                    
+                    point.title = business.name
+                    point.subtitle = business.isClosed ? "Closed" : "Open"
+                    return point
+                }
+                
+                strongSelf.mapView.addAnnotations(annotations)
             case .failure(let error):
                 print(error)
             }
         }
     }
-    
     
     // MARK: - Search
     func setupSearchBar() {
@@ -104,7 +121,20 @@ class YelpSearchController: UIViewController {
 extension YelpSearchController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showBusiness", sender: self)
+        let business = dataSource.object(at: indexPath)
+        
+        let detailsOperation = YelpBusinessDetailsOperation(business: business, client: self.client)
+        let reviewsOperation = YelpBusinessReviewsOperation(business: business, client: self.client)
+        reviewsOperation.addDependency(detailsOperation)
+        
+        reviewsOperation.completionBlock = {
+            DispatchQueue.main.async {
+                self.dataSource.update(business, at: indexPath)
+                self.performSegue(withIdentifier: "showBusiness", sender: self)
+            }
+        }
+        queue.addOperation(detailsOperation)
+        queue.addOperation(reviewsOperation)
     }
 }
 
@@ -125,6 +155,13 @@ extension YelpSearchController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showBusiness" {
             
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let business = dataSource.object(at: indexPath)
+                if let detailController = segue.destination as? YelpBusinessDetailController {
+                    detailController.business = business
+                    detailController.dataSource.updateData(business.reviews)
+                }
+            }
         }
     }
 }
@@ -134,12 +171,38 @@ extension YelpSearchController: LocationManagerDelegate {
     
     func obtainedCoordinates(_ coordinate: Coordinate) {
         self.coordinate = coordinate
+        adjustMap(wit: coordinate)
     }
     
     func failedWithError(_ error: LocationError) {
         
     }
 }
+
+//MARK: Observer
+extension YelpSearchController {
+    
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//
+//    }
+}
+
+
+//MARK: MpaKit
+extension YelpSearchController {
+    
+    func adjustMap(wit coordinate: Coordinate) {
+        
+        let coordinate2D = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        
+        let span = MKCoordinateRegionMakeWithDistance(coordinate2D, 2500, 2500)
+    .span ///zoom
+        let region = MKCoordinateRegion(center: coordinate2D, span: span)
+        mapView.setRegion(region, animated: true)
+        
+    }
+}
+
 
 
 

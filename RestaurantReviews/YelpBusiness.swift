@@ -88,3 +88,31 @@ class YelpBusiness: NSObject, JSONDecodable {
         }
     }
 }
+
+import MapKit
+
+extension YelpBusiness: MKAnnotation {
+    
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+    }
+    
+    var title: String? {
+        return name
+    }
+    
+    var subtitle: String? {
+        return isClosed ? "Closed" : "Open"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
