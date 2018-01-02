@@ -15,22 +15,22 @@ import Foundation
 /// - start()
 
 class YelpBusinessDetailsOperation: Operation {
-    
+
     let business: YelpBusiness
     let client: YelpClient
-    
+
     init(business: YelpBusiness, client: YelpClient) {
         self.business = business
         self.client = client
         super.init()
     }
-    
+
     override var isAsynchronous: Bool {
         return true
     }
-    
+
     private var _finished = false //backing property
-    
+
     //read publicly but just set it privately
     override private(set) var isFinished: Bool {
         get {
@@ -42,9 +42,9 @@ class YelpBusinessDetailsOperation: Operation {
             didChangeValue(forKey: "isFinished") //KVO
         }
     }
-    
+
     private var _executing = false
-    
+
     override var isExecuting: Bool {
         get {
             return _executing
@@ -55,13 +55,13 @@ class YelpBusinessDetailsOperation: Operation {
             didChangeValue(forKey: "isExecuting") //KVO
         }
     }
-    
+
     override func start() {
         if isCancelled {
             isFinished = true
             return
         }
-        
+
         isExecuting = true
         client.updateWithHoursAndPhotos(business) { [unowned self] (result) in
             switch result {
@@ -76,13 +76,3 @@ class YelpBusinessDetailsOperation: Operation {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-

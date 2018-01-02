@@ -27,7 +27,7 @@ protocol LocationManagerDelegate: class {
 }
 
 class LocationManager: NSObject {
-    
+
     private let manager = CLLocationManager()
     weak var permissionDelegate: LocationPermissionsDelegate?
     weak var delegate: LocationManagerDelegate?
@@ -39,19 +39,19 @@ class LocationManager: NSObject {
             return false
         }
     }
-    
+
     init(delegate: LocationManagerDelegate?, permissionDelegate: LocationPermissionsDelegate?) {
         self.permissionDelegate = permissionDelegate
         self.delegate = delegate
         super.init()
         manager.delegate = self
-        //MARK: default but just to show we can modifiy the accuracy
+        // MARK: default but just to show we can modifiy the accuracy
         manager.desiredAccuracy = kCLLocationAccuracyBest
     }
-    
-    //MARK: Asking for permission
+
+    // MARK: Asking for permission
     func requestLocationAuthorization() throws {
-        
+
         let authStatus = CLLocationManager.authorizationStatus()
         if authStatus == .restricted || authStatus == .denied {
             throw LocationError.dissallowedByUser
@@ -61,30 +61,30 @@ class LocationManager: NSObject {
             return
         }
     }
-    
+
     func requestLocation() {
         manager.requestLocation()
     }
 }
 
 extension LocationManager: CLLocationManagerDelegate {
-    
+
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
+
         if status == .authorizedWhenInUse {
             permissionDelegate?.authSucceded()
         } else {
             permissionDelegate?.authFailedWithStaus(status)
         }
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        
+
         guard let error = error as? CLError else {
             delegate?.failedWithError(.unknownError)
             return
         }
-        
+
         switch error.code {
         case .locationUnknown, .network:
             delegate?.failedWithError(.unableToFindLocation)
@@ -93,9 +93,9 @@ extension LocationManager: CLLocationManagerDelegate {
         default: return
         }
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
+
         guard let location = locations.last else {
             delegate?.failedWithError(.unableToFindLocation)
             return
@@ -106,21 +106,9 @@ extension LocationManager: CLLocationManagerDelegate {
 }
 
 enum LocationError: Error {
-    
+
     case unknownError
     case dissallowedByUser
     case unableToFindLocation
-    
-    
+
 }
-
-
-
-
-
-
-
-
-
-
-

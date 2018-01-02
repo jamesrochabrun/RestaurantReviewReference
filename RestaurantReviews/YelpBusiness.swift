@@ -23,16 +23,16 @@ class YelpBusiness: NSObject, JSONDecodable {
     let phone: String
     let displayPhone: String
     let price: String
-    
+
     // Only available through search results not direct business queries
     var distance: Double?
-    
+
     // Detail properties
     var photos: [String]
     var hours: BusinessHours?
     var reviews: [YelpReview]
-    
-    required init?(json: [String : Any]) {
+
+    required init?(json: [String: Any]) {
         guard let id = json["id"] as? String,
             let name = json["name"] as? String,
             let imageUrl = json["image_url"] as? String,
@@ -50,7 +50,7 @@ class YelpBusiness: NSObject, JSONDecodable {
             let phone = json["phone"] as? String,
             let displayPhone = json["display_phone"] as? String
             else { return nil }
-        
+
         self.id = id
         self.name = name
         self.imageUrl = imageUrl
@@ -65,24 +65,24 @@ class YelpBusiness: NSObject, JSONDecodable {
         self.phone = phone
         self.displayPhone = displayPhone
         self.price = price
-        
+
         self.distance = json["distance"] as? Double
         self.photos = json["photos"] as? [String] ?? []
-        
+
         if let hours = json["hours"] as? [[String: Any]], let dict = hours.first {
             self.hours = BusinessHours(json: dict)
         }
-        
+
         self.reviews = []
-        
+
         super.init()
     }
-    
+
     func updateWithHoursAndPhotos(json: [String: Any]) {
         if let photoStrings = json["photos"] as? [String] {
             photos = photoStrings
         }
-        
+
         if let hours = json["hours"] as? [[String: Any]], let dict = hours.first {
             self.hours = BusinessHours(json: dict)
         }
@@ -92,27 +92,16 @@ class YelpBusiness: NSObject, JSONDecodable {
 import MapKit
 
 extension YelpBusiness: MKAnnotation {
-    
+
     var coordinate: CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
     }
-    
+
     var title: String? {
         return name
     }
-    
+
     var subtitle: String? {
         return isClosed ? "Closed" : "Open"
     }
 }
-
-
-
-
-
-
-
-
-
-
-
