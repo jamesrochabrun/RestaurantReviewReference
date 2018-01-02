@@ -9,9 +9,9 @@
 import UIKit
 
 class ReviewCell: UITableViewCell {
-    
+
     static let reuseIdentifier = "ReviewCell"
-    
+
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var reviewLabel: UILabel!
 
@@ -25,7 +25,7 @@ class ReviewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func configure(with viewModel: ReviewCellViewModel) {
         reviewLabel.text = viewModel.review
         userImageView.image = viewModel.userImage

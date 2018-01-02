@@ -14,7 +14,7 @@ struct Coordinate {
 }
 
 extension Coordinate: JSONDecodable {
-    init?(json: [String : Any]) {
+    init?(json: [String: Any]) {
         guard let latitudeValue = json["latitude"] as? Double, let longitudeValue = json["longitude"] as? Double else { return nil }
         self.latitude = latitudeValue
         self.longitude = longitudeValue

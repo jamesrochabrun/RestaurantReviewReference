@@ -21,7 +21,7 @@ struct Address {
 }
 
 extension Address: JSONDecodable {
-    init?(json: [String : Any]) {
+    init?(json: [String: Any]) {
         guard let street = json["address1"] as? String,
             let city = json["city"] as? String,
             let zip = json["zip_code"] as? String,
@@ -29,7 +29,7 @@ extension Address: JSONDecodable {
             let state = json["state"] as? String,
             let display = json["display_address"] as? [String]
             else { return nil }
-        
+
         self.address1 = street
         self.address2 = json["address2"] as? String
         self.address3 = json["address3"] as? String

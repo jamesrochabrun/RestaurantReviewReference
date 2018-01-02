@@ -24,24 +24,23 @@ class YelpBusinessDetailController: UITableViewController {
             }
         }
     }
-    
+
     var business: YelpBusiness?
-    
+
     lazy var dataSource: YelpReviewsDataSource = {
         return YelpReviewsDataSource(data: [])
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupTableView()
-        
+
         if let business = business, let viewModel = YelpBusinessDetailViewModel(business: business) {
             configure(with: viewModel)
         }
     }
-    
-    
+
     /// Configures the views in the table view's header view
     ///
     /// - Parameter viewModel: View model representation of a YelpBusiness object
@@ -55,7 +54,7 @@ class YelpBusinessDetailController: UITableViewController {
     }
 
     // MARK: - Table View
-    
+
     func setupTableView() {
         tableView.dataSource = dataSource
         tableView.delegate = self

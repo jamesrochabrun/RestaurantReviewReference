@@ -26,17 +26,17 @@ extension Endpoint {
         var components = URLComponents(string: base)!
         components.path = path
         components.queryItems = queryItems
-        
+
         return components
     }
-    
+
     /// Returns an instance of URLRequest encapsulating the endpoint URL. This 
     /// URL is obtained through the `urlComponents` object.
     var request: URLRequest {
         let url = urlComponents.url!
         return URLRequest(url: url)
     }
-    
+
     //oauthToken
     func requestWithAuthorizationHeader(oauthToken: String) -> URLRequest {
         var oauthRequest = request
@@ -48,7 +48,7 @@ extension Endpoint {
 enum Yelp {
     enum YelpSortType: CustomStringConvertible {
         case bestMatch, rating, reviewCount, distance
-        
+
         var description: String {
             switch self {
             case .bestMatch: return "best_match"
@@ -58,7 +58,7 @@ enum Yelp {
             }
         }
     }
-    
+
     case search(term: String, coordinate: Coordinate, radius: Int?, categories: [YelpCategory], limit: Int?, sortBy: YelpSortType?)
     case business(id: String)
     case reviews(businessId: String)
@@ -68,7 +68,7 @@ extension Yelp: Endpoint {
     var base: String {
         return "https://api.yelp.com"
     }
-    
+
     var path: String {
         switch self {
         case .search: return "/v3/businesses/search"
@@ -76,7 +76,7 @@ extension Yelp: Endpoint {
         case .reviews(let id): return "/v3/businesses/\(id)/reviews"
         }
     }
-    
+
     var queryItems: [URLQueryItem] {
         switch self {
         case .search(let term, let coordinate, let radius, let categories, let limit, let sortBy):

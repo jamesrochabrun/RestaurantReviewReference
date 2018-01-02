@@ -14,7 +14,7 @@ enum APIError: Error {
     case invalidData
     case responseUnsuccessful
     case jsonParsingFailure
-    
+
     var localizedDescription: String {
         switch self {
         case .requestFailed: return "Request Failed"
@@ -27,21 +27,21 @@ enum APIError: Error {
 }
 
 protocol APIClient {
-    
+
     var session: URLSession { get }
     func fetch<T: JSONDecodable>(with request: URLRequest, parse: @escaping (JSON) -> T?, completion: @escaping (Result<T, APIError>) -> Void)
     func fetch<T: JSONDecodable>(with request: URLRequest, parse: @escaping (JSON) -> [T], completion: @escaping (Result<[T], APIError>) -> Void)
-    
+
 }
 
 extension APIClient {
-    
+
     typealias JSON = [String: AnyObject]
     typealias JSONTaskCompletionHandler = (JSON?, APIError?) -> Void
-    
+
     func jsonTask(with request: URLRequest, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
         let task = session.dataTask(with: request) { data, response, error in
-            
+
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(nil, .requestFailed)
                 return
@@ -63,12 +63,12 @@ extension APIClient {
         }
         return task
     }
-    
+
     func fetch<T: JSONDecodable>(with request: URLRequest, parse: @escaping (JSON) -> T?, completion: @escaping (Result<T, APIError>) -> Void) {
-        
-        let task = jsonTask(with: request) { (json , error) in
-            
-            //MARK: change to main queue
+
+        let task = jsonTask(with: request) { (json, error) in
+
+            // MARK: change to main queue
             DispatchQueue.main.async {
                 guard let json = json else {
                     if let error = error {
@@ -87,12 +87,12 @@ extension APIClient {
         }
         task.resume()
     }
-    
+
     func fetch<T: JSONDecodable>(with request: URLRequest, parse: @escaping (JSON) -> [T], completion: @escaping (Result<[T], APIError>) -> Void) {
-        
-        let task = jsonTask(with: request) { (json , error) in
-            
-            //MARK: change to main queue
+
+        let task = jsonTask(with: request) { (json, error) in
+
+            // MARK: change to main queue
             DispatchQueue.main.async {
                 guard let json = json else {
                     if let error = error {
@@ -103,7 +103,7 @@ extension APIClient {
                     return
                 }
                 let value = parse(json)
-                
+
                 if !value.isEmpty {
                     completion(.success(value))
                 } else {
@@ -114,23 +114,3 @@ extension APIClient {
         task.resume()
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
